@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">My Timezones</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        {{#if App.session.token}}
+          <li>{{#link-to 'sessions.destroy'}}Sign out{{/link-to}}</li>
+        {{else}}
+          <li>{{#link-to 'sessions.new'}}Sign in{{/link-to}}</li>
+          <li>{{#link-to 'users.new'}}Register{{/link-to}}</li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  {{outlet}}
+</div>
+

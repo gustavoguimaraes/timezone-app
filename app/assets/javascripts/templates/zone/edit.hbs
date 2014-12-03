@@ -1,0 +1,14 @@
+
+  <h1>
+    {{model.name}}
+  </h1>
+
+<p>{{view Ember.TextField value=model.name placeholder="Name Your Timezone"}}</p>
+
+<p>{{ view Ember.Select content=zones selection=selectedTimezone
+   optionValuePath='content.minutesOffset' optionLabelPath='content.cityName'}}</p>
+
+<p><button {{action 'add'}}>Edit Timezone</button>
+    <button {{action 'cancel'}}>Cancel</button>
+</p>
+

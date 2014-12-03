@@ -1,0 +1,28 @@
+
+{{#unless isNew}}
+  <h1 class='center'>My Timezones</h1>
+  <h4 class="left-positioning">Local Time: {{localTime}}</h4>
+    {{#link-to 'zones.new' classNames='right-link'}}New Timezone Entry{{/link-to}}
+    {{view Ember.TextField value=search placeholder="Search Names" classNames="form-control"}}
+    <br>
+    <div class="col-md-12">
+      <div class="row">
+        {{#each zone in zones}}
+          {{#link-to 'zone' zone tagName="div" classNames="pointer"}}
+            <ul class="listing">
+              <h3>{{zone.name}}</h3>
+
+              <h3>Location: {{zone.cityName}}</h3>
+
+              <h3>Time: {{zone.time}}</h3>
+
+              <h3>GMT: {{zone.gmtTimeDifference}}</h3>
+            </ul>
+          {{/link-to}}
+        {{/each}}
+      </div>
+    </div>
+{{/unless}}
+
+{{outlet}}
+

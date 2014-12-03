@@ -1,0 +1,14 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  email: user@mail.com
+  password_digest: $2a$10$HWCM7WCOpfrGT8vqi07t7enoJxRFuNVkE81GmL/CjHliDJ9ohLcZO
+  access_token: 882fac1172a0f2c5ba26be00ea6559c5
+
+two:
+  id: 2
+  email: other_user@mail.com
+  password_digest: $2a$10$HWCM7WCOpfrGT8vqi07t7enoJxRFuNVkE81GmL/CjHliDJ9ohLcZO
+  access_token: a7532137bbbab5a2e13c2469a98549f6

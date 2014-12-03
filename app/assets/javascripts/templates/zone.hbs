@@ -1,0 +1,19 @@
+{{outlet}}
+
+{{#unless isEditing}}
+
+<div class="listing">
+<a href="/" class='left-link'>Return</a>
+
+{{#link-to 'zone.edit' model classNames='right-link'}}
+                Edit{{/link-to}}
+    <h1>{{model.name}}</h1>
+
+    <p> Location: {{model.cityName}}</p>
+    <p> Time: {{time}}</p>
+    <p> GMT Difference: {{model.gmtTimeDifference}}</p>
+
+  <a class="right-link" href="#" {{action "delete" on="click"}}>Delete</a>
+</div>
+
+{{/unless}}
